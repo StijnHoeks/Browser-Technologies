@@ -7,22 +7,22 @@ Onderzoek minimaal twee features. Dat betekent uitvogelen wat het voor impact he
 
 Kies 2 features van de 8
 - Afbeeldingen
-- custom fonts
+- Custom fonts
 
 Zoek uit welke problemen ze kunnen veroorzaken (verzamel cijfers, meningen, ervaringen)
 
 Afbeeldingen: 
-- De structuur en hiërarchie van de content kan onduidelijk worden, voornamelijk wanneer je niet weet dat er een abeelding mist. (lege vlakken, overlappende elementen etc.)
+- De structuur en hiërarchie van de content kan onduidelijk worden, voornamelijk wanneer je niet weet dat er een abeelding mist (lege vlakken, overlappende elementen etc.).
 - De website kan onbruikbaar worden wanneer afbeeldingen cruciaal zijn.
 
 Custom fonts:
 - De lay-out kan breken, sommige fonts zijn breder of groter dan andere fonts.
-- sommige fonts of bepaalde kleuren kunnen de leesbaarheid aantasten.
+- Sommige fonts of bepaalde kleuren kunnen de leesbaarheid aantasten.
 
 Zoek uit hoe je dit kunt testen (hoe kun je een feature ‘uitzetten’)
 
 Afbeeldingen:
-- in safari: ontwikkel > schakel afbeeldingen uit
+- Safari: ontwikkel > schakel afbeeldingen uit
 
 Custom fonts:
 ?
@@ -42,6 +42,3 @@ Custom fonts
 - Meerdere native (backup) fonts gebruiken
 - Backup servers
 - CDN
-
-Maak hierover een presentatie en neem die woensdag mee, dan gaan we de resultaten bespreken
-
