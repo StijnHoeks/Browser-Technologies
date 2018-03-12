@@ -25,7 +25,7 @@ Afbeeldingen:
 - Safari: ontwikkel > schakel afbeeldingen uit
 
 Custom fonts:
-?
+- Font-size: weergave > pas knoppenbalk aan
 
 Vind een aantal sites waar dit ook problemen oplevert (uit je directe omgeving)
 - http://www.flashstudio.nl
