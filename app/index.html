@@ -19,7 +19,7 @@
 		<ul>
 			<li><a href="#gallery">Gallery</a></li>
 			<li><a href="#research">Research</a></li>
-			<li><a href="https://github.com/StijnHoeks/wafs">Readme</a></li>
+			<li><a href="https://github.com/StijnHoeks/Browser-Technologies">Readme</a></li>
 		</ul>
 	</nav>
 
@@ -200,29 +200,99 @@
 			</svg>
 		</div>
 
+
 	</section>
 
 	<section id="research">
-		<h1>Research</h1>
+
+		<h1>Browser-Technologies</h1>
+		<h2>OPDRACHT 1.1: BREEK HET WEB</h2>
+
+		<p>
+			Het Web laten 'breken' door features van het platform bewust uit te zetten. Images, custom fonts, JavaScript, kleur, breedband internet, etc. Allemaal met als doel je te laten beseffen hoeveel je nog niet weet van het Web, erachter komen dat je misschien aannames hebt die niet kloppen, en om je je in te laten leven in de eindgebruiker. Onderzoek minimaal twee features. Dat betekent uitvogelen wat het voor impact heeft op de sites die je kent en normaal gebruikt. Kies sites in je directe omgeving: van je werkgever, lokale vereniging, de cafetaria om de hoek, en/of eerdere projecten die je zelf gedaan hebt.
+		</p>
+
+		<h2>
+			Kies 2 features van de 8
+		</h2>
 		<ul>
-			<h2>Advantages of libraries/frameworks</h2>
-			<li>+ Libraries are build up of pre written modules of code, wich makes it an easy and quick solution for developers.</li>
-			<li>+ Since these libraries are open source, the're thoroughly tested by countless of developers: "Many eyes make all bugs shallow".</li>
-			<h2>Disadvantages of libraries/frameworks</h2>
-			<li>- It's better to fully understand the layers beneath (plain javascript) before using these libraries/frameworks. Doing so will help you understand what javascript actually does and wether you should make use of an external library.</li>
-			<li>- Projects that heavily depend on external libraries could fall apart when internet connection is lost or the cdn used fails - or in worst case scenario - when a library is not being maintained, contributed or supported anymore.</li>
+			<li>- Afbeeldingen</li>
+			<li>- Custom fonts</li>
 		</ul>
-		<ul>
-			<h2>Advantages of single page web app</h2>
-			<li>+ Single page web apps don't have to reload the entire page to update content, only specific sets of new data are requested and sent as the user navigates through the application.</li>
-			<li>+ The developer has a the ability to create an immersive user experience</li>
-			<li>+ Only a single index file is needed.</li>
-			<h2>Disadvantages of single page web app</h2>
-			<li>- If javascript fails to load, there will be nothing.</li>
-		</ul>
+		<h2>
+			Zoek uit welke problemen ze kunnen veroorzaken (verzamel cijfers, meningen, ervaringen)
+		</h2>
+		<h3>
+			Afbeeldingen:
+		</h3>
+		<li>
+			- De structuur en hiërarchie van de content kan onduidelijk worden, voornamelijk wanneer je niet weet dat er een abeelding mist (lege vlakken, overlappende elementen etc.).
+		</li>
+		<li>
+			- De website kan onbruikbaar worden wanneer afbeeldingen cruciaal zijn.
+		</li>
+
+		<h3>
+			Custom fonts:
+		</h3>
+		<li>
+			- De lay-out kan breken, sommige fonts zijn breder of groter dan andere fonts.
+		</li>
+		<li>
+			- Sommige fonts of bepaalde kleuren kunnen de leesbaarheid aantasten.
+		</li>
+		<h2>
+			Zoek uit hoe je dit kunt testen (hoe kun je een feature ‘uitzetten’)
+		</h2>
+		<li>
+			- Afbeeldingen: Safari > ontwikkel > schakel afbeeldingen uit
+		</li>
+		<h3>
+			Custom fonts:
+		</h3>
+		<li>
+			- Font-size: weergave > pas knoppenbalk aan
+		</li>
+		<h2>
+			Vind een aantal sites waar dit ook problemen oplevert (uit je directe omgeving)
+		</h2>
+		<li>
+			- http://www.flashstudio.nl
+		</li>
+		<h2>
+			Beschrijf hoe je dit kan fiksen
+		</h2>
+		<h3>
+			Afbeeldingen:
+		</h3>
+		<li>
+			- Een alt toevoegen
+		</li>
+		<li>
+			- Backup-afbeeldingen
+		</li>
+		<li>
+			- Backup servers
+		</li>
+		<li>
+			- CDN
+		</li>
+		<h3>
+			Custom fonts:
+		</h3>
+		<li>
+			- Meerdere native (backup) fonts gebruiken
+		</li>
+		<li>
+			- Backup servers
+		</li>
+		<li>
+			- CDN
+		</li>	
+
 	</section>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
     <script type="text/javascript" src="static/js/routie.js"></script>
     <script src="static/js/shaven.js"></script>
 	<script src="static/js/script.js" type="text/javascript"></script>
