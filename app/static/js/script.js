@@ -145,10 +145,12 @@
         render: function(data) {
 
             for (var i = 0; i < data.length; i++) {
+                var imgsrcRaw = data[i].img_src;
+                var imgsrc = imgsrcRaw.replace("http", "https");
                 shaven.default(
                     [document.getElementById(data[i].camera.name+'_'+i),//data.photos[i].id
                         ['div', {
-                            style: { 'background-image': 'url('+data[i].img_src+')' },
+                            style: { 'background-image': 'url('+imgsrc+')' },
                         }],
                         ['ul',    
                             ['li', 'Camera',
