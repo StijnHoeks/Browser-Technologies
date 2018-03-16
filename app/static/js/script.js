@@ -2,6 +2,8 @@
 
 (function() {
 
+    "use strict"
+
     // initialize application
     var app = {
         init: function() {
@@ -141,15 +143,19 @@
             controls.event(data);
         },
         render: function(data) {
-
+ 
             for (var i = 0; i < data.length; i++) {
                 var imgsrc = data[i].img_src;
+                var imgalt = 'ID: '+data[i].id+' | Camera: '+data[i].camera.full_name;
                 /*var imgsrc = imgsrcRaw.replace("http", "https");*/
                 shaven.default(
                     [document.getElementById(data[i].camera.name+'_'+i),//data.photos[i].id
-                        ['div', {
+                        ['div', 
+                            ['img', {src: imgsrc, alt: 'NASA Mars Rover Images | '+imgalt}]
+                        /*{
                             style: { 'background-image': 'url('+imgsrc+')' },
-                        }],
+                        }*/
+                        ],
                         ['ul',    
                             ['li', 'Camera',
                                 ['p',data[i].camera.name]

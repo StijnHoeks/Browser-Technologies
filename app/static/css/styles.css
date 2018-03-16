@@ -15,6 +15,7 @@
 	text-decoration: none;
 	border: none;
 	color: rgb(60,60,60);
+	border-collapse: collapse;
 }
 html {
 	font-size: 62.5%;
@@ -46,6 +47,7 @@ section.active {
 	display: block;
 }
 
+
 /************/
 /* ELEMENTS */
 /************/
@@ -73,7 +75,7 @@ li {
 #detail li {
 	display: block;
 }
-img {
+#detail img {
 	border-radius: 0.4rem;
 }
 a:hover {
@@ -114,7 +116,7 @@ nav a {
 	line-height: 6rem;
 	transition: all 180ms ease;
 }
-nav a:hover {
+nav a:hover, nav a:focus {
 	color: rgb(240,100,80);
 }
 nav a:after {
@@ -127,7 +129,7 @@ nav a:after {
 	background-color: rgb(240,100,80);
 	transition: all 180ms ease;
 }
-nav a:hover:after {
+nav a:hover:after, nav a:focus:after {
 	width: calc(100% - 2rem);
 	left: 1rem;
 }
@@ -240,10 +242,14 @@ input[value]:hover {
 	position: relative;
 	width: 50%;
 	height: 100%;
-	background-size: cover;
-	background-position: right 25%;
+	overflow: hidden;
+	object-fit: cover;
+	object-position: center;
 	border-top-left-radius: 0.4rem;
 	border-bottom-left-radius: 0.4rem;
+}
+#content>a img {
+	width: 100%;
 }
 #content>a:hover {
 	transform: scale(1.015) !important;
@@ -353,8 +359,6 @@ div#loader.hide {
 #svgrover {
 	width: 150px;
 }
-
-
 
 
 
