@@ -2,8 +2,6 @@
 
 (function() {
 
-    "use strict"
-
     // initialize application
     var app = {
         init: function() {
@@ -65,7 +63,7 @@
             document.getElementById('gallery').appendChild(errorMessage);
             shaven.default(
                 [document.getElementById('errorMessage'),
-                    ['img', {src:'static/img/404.jpg'} ],
+                    ['img', {src:'static/img/rover_broken kopie.svg'} ],
                     ['article',
                         ['h1', 'SERVER ERROR'],
                         ['p', 'De request kon niet worden voltooid'],
