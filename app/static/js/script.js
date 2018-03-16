@@ -273,8 +273,6 @@
     	sol: function(data,filterSol) { // NOT WORKING YET
 
             var list = document.querySelectorAll("#content>a");
-            
-            document.getElementById('detail').remove()
 
             for (var i = list.length-1; 0 <= i; i--) {
                 list[i].remove()
