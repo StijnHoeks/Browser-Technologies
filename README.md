@@ -46,4 +46,6 @@ Custom fonts
 
 OPDRACHT 1.2
 
-![alt text](static/img/IMG_0285.png)
+![alt text](app/static/img/IMG_0285.png)
+![alt text](app/static/img/IMG_0286.png)
+![alt text](app/static/img/IMG_0287.png)
