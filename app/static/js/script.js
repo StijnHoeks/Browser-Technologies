@@ -145,9 +145,9 @@
         render: function(data) {
  
             for (var i = 0; i < data.length; i++) {
-                var imgsrc = data[i].img_src;
+                var imgsrcRaw = data[i].img_src;
+                var imgsrc = imgsrcRaw.replace("http", "https");
                 var imgalt = 'ID: '+data[i].id+' | Camera: '+data[i].camera.full_name;
-                /*var imgsrc = imgsrcRaw.replace("http", "https");*/
                 shaven.default(
                     [document.getElementById(data[i].camera.name+'_'+i),//data.photos[i].id
                         ['div', 
