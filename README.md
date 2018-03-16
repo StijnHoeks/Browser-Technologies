@@ -42,3 +42,8 @@ Custom fonts
 - Meerdere native (backup) fonts gebruiken
 - Backup servers
 - CDN
+
+
+OPDRACHT 1.2
+
+![alt text](static/img/IMG_0285.png)
