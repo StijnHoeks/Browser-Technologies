@@ -193,6 +193,8 @@
         },
         render: function(data) {
 
+            document.getElementById('detail').remove()
+            
             shaven.default(
                 [document.getElementById('detail'),
                     ['header',
@@ -272,7 +274,7 @@
     	},
     	sol: function(data,filterSol) { // NOT WORKING YET
 
-            var list = document.querySelectorAll("#content>a, #detail");
+            var list = document.querySelectorAll("#content>a");
 
             for (var i = list.length-1; 0 <= i; i--) {
                 list[i].remove()
