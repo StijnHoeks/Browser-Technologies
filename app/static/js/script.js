@@ -192,8 +192,6 @@
             
         },
         render: function(data) {
-
-            document.getElementById('detail').remove()
             
             shaven.default(
                 [document.getElementById('detail'),
