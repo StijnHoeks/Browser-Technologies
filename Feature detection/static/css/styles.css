@@ -1,0 +1,218 @@
+
+/*********/
+/* RESET */
+/*********/
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style: normal;
+	text-decoration: none;
+	list-style: none;
+	border-collapse: collapse;
+	box-sizing: border-box;
+}
+
+
+/********/
+/* MAIN */
+/********/
+
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	color: rgb(60,60,60);
+	font-size: 1.4rem;
+}
+
+
+/************/
+/* ELEMENTS */
+/************/
+
+header {
+	padding: 1rem 0;
+}
+h1 {
+	font-weight: 500;
+	font-size: 2rem;
+	line-height: 1.5;
+}
+h2 {
+	font-weight: 400;
+	font-size: 1.8rem;
+	line-height: 1.5;
+}
+
+/*******/
+/* NAV */
+/*******/
+
+nav {
+	position: fixed;
+	height: min-content;
+	width: 100%;
+	min-height: 5rem;
+	box-shadow: 0 0 1rem rgb(230,230,230);
+	background-color: rgb(255,255,255);
+}
+nav ul {
+	padding: 0 15%;
+}
+nav li {
+	display: inline-block;
+}
+nav a {
+	display: block;
+	line-height: 5rem;
+	padding: 0 1rem;
+	color: rgb(60,60,60);
+	transition: all 100ms ease;
+}
+nav a:hover {
+	color: rgb(60,160,240);
+}
+nav div a:after {
+	content: "";
+	display: block;
+	position: relative;
+	bottom: 0;
+	width: 0;
+	left: 50%;
+	height: 0.2rem;
+	background-color: rgb(60,160,240);
+	transition: all 100ms ease;
+}
+nav div a:hover:after {
+	width: 100%;
+	left: 0;
+}
+
+/* HAMBURGER */
+
+nav>ul>li:first-of-type {
+	display: none;
+}
+#hamburger {
+	position: absolute;
+	top: 0;
+	height: 5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#hamburger span {
+	display: block;
+	width: 1.5rem;
+	height: 0.2rem;
+	margin: 0.2rem 0;
+	background-color: rgb(60,60,60);
+	transition: all 240ms ease-in-out;
+}
+nav li:first-of-type:hover {
+	cursor: pointer;
+}
+#hamburger:hover span {
+	background-color: rgb(60,160,240);
+}
+nav div {
+	display: inline-block;
+}
+@media screen and (max-width: 960px) {
+	nav>ul>li:first-of-type {
+		display: inline-block;
+	}
+	nav div {
+		height: 0;
+		display: block;
+		overflow: hidden;
+		margin-top: 3rem;
+	}
+	nav div li {
+		display: block;
+	}
+	nav a {
+		width: min-content;
+		white-space: nowrap;
+	}
+	.showmenu div {
+		height: min-content;
+	}
+	.showmenu div li {
+		display: block;
+	}
+	.showmenu #hamburger span:nth-of-type(1) {
+		transform: rotate(45deg);
+		transform-origin: left bottom;
+		margin-top: 0.1rem;
+	}
+	.showmenu #hamburger span:nth-of-type(2) {
+		width: 0;
+	}
+	.showmenu #hamburger span:nth-of-type(3) {
+		transform: rotate(-45deg);
+		transform-origin: left top;
+		margin-top: 0.1rem;
+	}
+}
+
+/***********/
+/* SECTION */
+/***********/
+
+section {
+	padding: 10rem 15%;
+}
+section a {
+	display: inline-block;
+	position: relative;
+	width: 30%;
+	height: 15vw;
+	box-shadow: 0 0 1rem rgb(230,230,230);
+	border-radius: 0.2rem;
+	overflow: hidden;
+	margin: 1.5% 0;
+}
+section a:nth-of-type(3n+2) {
+	margin: 1.5% 3%;
+}
+@media screen and (max-width: 960px) {
+	section a:nth-of-type(odd) {
+		width: 46%;
+		margin: 1.5% 1% 1.5% 0;
+	}
+	section a:nth-of-type(even) {
+		width: 46%;
+		margin-left: 1.5% 0 1.5% 1%;
+	}
+}
+figure {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/mountain.jpg');
+	background-size: cover;
+}
+figcaption {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	padding: 2rem;
+	opacity: 0;
+	background-color: rgba(0,0,0,0.5);
+	color: rgb(255,255,255);
+	transition: all 200ms ease-in-out;
+}
+section a:hover figcaption {
+	opacity: 1;
+}
+
+
+
+
