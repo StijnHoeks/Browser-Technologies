@@ -8,6 +8,14 @@
             nav.hamburger()
         }
     }
+    var feature =  {
+        detection: function() {
+            
+        }
+    }
+    var sparkle = {
+        
+    }
     var nav = {
         hamburger: function() {
 

@@ -27,8 +27,13 @@ body {
 	font-weight: 400;
 	color: rgb(60,60,60);
 	font-size: 1.4rem;
+	scroll-behavior: smooth;
+	border-radius: 1rem;
+	background-color: rgb(250,250,250);
 }
-
+section {
+	padding: 10rem 15%;
+}
 
 /************/
 /* ELEMENTS */
@@ -53,14 +58,20 @@ h2 {
 /*******/
 
 nav {
-	position: fixed;
+	position: absolute;
 	height: min-content;
 	width: 100%;
-	min-height: 5rem;
-	box-shadow: 0 0 1rem rgb(230,230,230);
+	left: 0;
+	top: 0;
+	min-height: 6rem;
+	z-index: 80;
+	/*box-shadow: 0 0 1rem rgb(230,230,230);*/
+	border-bottom: 1px solid rgb(240,240,240);
 	background-color: rgb(255,255,255);
+	background-color: rgba(255,255,255,0.96);
 }
 nav ul {
+	display: flex;
 	padding: 0 15%;
 }
 nav li {
@@ -68,7 +79,7 @@ nav li {
 }
 nav a {
 	display: block;
-	line-height: 5rem;
+	line-height: 6rem;
 	padding: 0 1rem;
 	color: rgb(60,60,60);
 	transition: all 100ms ease;
@@ -80,12 +91,12 @@ nav div a:after {
 	content: "";
 	display: block;
 	position: relative;
-	bottom: 0;
+	bottom: 0.2rem;
 	width: 0;
 	left: 50%;
 	height: 0.2rem;
 	background-color: rgb(60,160,240);
-	transition: all 100ms ease;
+	transition: all 150ms ease;
 }
 nav div a:hover:after {
 	width: 100%;
@@ -98,9 +109,9 @@ nav>ul>li:first-of-type {
 	display: none;
 }
 #hamburger {
-	position: absolute;
+	position: relative;
 	top: 0;
-	height: 5rem;
+	height: 6rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -111,7 +122,7 @@ nav>ul>li:first-of-type {
 	height: 0.2rem;
 	margin: 0.2rem 0;
 	background-color: rgb(60,60,60);
-	transition: all 240ms ease-in-out;
+	transition: all 200ms ease-in-out;
 }
 nav li:first-of-type:hover {
 	cursor: pointer;
@@ -120,40 +131,48 @@ nav li:first-of-type:hover {
 	background-color: rgb(60,160,240);
 }
 nav div {
+	height: 0;
 	display: inline-block;
+	transition: all 300ms ease;
 }
 @media screen and (max-width: 960px) {
+	nav ul {
+		flex-direction: column;
+	}
 	nav>ul>li:first-of-type {
-		display: inline-block;
+		display: block;
 	}
 	nav div {
-		height: 0;
 		display: block;
+		height: 0;
 		overflow: hidden;
-		margin-top: 3rem;
+		transition: all 300ms ease;
 	}
 	nav div li {
 		display: block;
 	}
 	nav a {
+		line-height: 2rem;
+		padding: 2rem;
 		width: min-content;
 		white-space: nowrap;
 	}
-	.showmenu div {
-		height: min-content;
+	nav.showmenu div {
+		height: 100vh;
+		transition: all 300ms ease;
 	}
-	.showmenu div li {
+	nav.showmenu div li {
 		display: block;
 	}
-	.showmenu #hamburger span:nth-of-type(1) {
+	nav.showmenu #hamburger span:nth-of-type(1) {
 		transform: rotate(45deg);
 		transform-origin: left bottom;
 		margin-top: 0.1rem;
 	}
-	.showmenu #hamburger span:nth-of-type(2) {
+	nav.showmenu #hamburger span:nth-of-type(2) {
 		width: 0;
 	}
-	.showmenu #hamburger span:nth-of-type(3) {
+	nav.showmenu #hamburger span:nth-of-type(3) {
 		transform: rotate(-45deg);
 		transform-origin: left top;
 		margin-top: 0.1rem;
@@ -161,57 +180,69 @@ nav div {
 }
 
 /***********/
-/* SECTION */
+/* ARTICLE */
 /***********/
 
-section {
-	padding: 10rem 15%;
-}
-section a {
+article a {
 	display: inline-block;
 	position: relative;
 	width: 30%;
-	height: 15vw;
-	box-shadow: 0 0 1rem rgb(230,230,230);
-	border-radius: 0.2rem;
+	height: 12vw;
+	border-radius: 0.3rem;
 	overflow: hidden;
+	box-shadow: 0 0 1rem rgb(230,230,230);
 	margin: 1.5% 0;
 }
-section a:nth-of-type(3n+2) {
+article a:nth-of-type(3n+2) {
 	margin: 1.5% 3%;
 }
 @media screen and (max-width: 960px) {
-	section a:nth-of-type(odd) {
+	article a:nth-of-type(odd) {
 		width: 46%;
 		margin: 1.5% 1% 1.5% 0;
 	}
-	section a:nth-of-type(even) {
+	article a:nth-of-type(even) {
 		width: 46%;
 		margin-left: 1.5% 0 1.5% 1%;
 	}
 }
-figure {
-	display: block;
+@media screen and (max-width: 640px) {
+	article a {
+		width: 100% !important;
+		height: 20vw;
+		margin: 1.5% 0 !important;
+	}
+}
+
+img {
+	display: inline-block;
+	position: relative;
 	width: 100%;
 	height: 100%;
-	background-image: url('../img/mountain.jpg');
-	background-size: cover;
+	object-fit: cover;
+	object-position: center 25%;
+	transition: all 100ms ease-out;
+}
+article a:hover img {
+	transform: scale(1.035);
 }
 figcaption {
-	display: block;
 	position: absolute;
+	top: 0;
 	width: 100%;
 	height: 100%;
-	top: 0;
 	padding: 2rem;
+	color: rgb(60,60,60);
+	transition: all 150ms ease-out;
 	opacity: 0;
-	background-color: rgba(0,0,0,0.5);
-	color: rgb(255,255,255);
-	transition: all 200ms ease-in-out;
+	background-color: rgb(255,255,255);
+	background-color: rgba(255,255,255,0.6);
 }
-section a:hover figcaption {
+article a:hover figcaption {
 	opacity: 1;
 }
+
+
 
 
 
