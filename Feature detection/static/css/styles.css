@@ -40,7 +40,7 @@ section {
 /************/
 
 header {
-	padding: 1rem 0;
+	padding: 1rem 0 2rem 0;
 }
 h1 {
 	font-weight: 500;
@@ -185,11 +185,14 @@ input {
 /* ARTICLE */
 /***********/
 
+article {
+	display: flex;
+}
 article>a {
 	display: inline-block;
 	position: relative;
 	width: 30%;
-	height: 12vw;
+	height: 30vw;
 	border-radius: 0.3rem;
 	overflow: hidden;
 	box-shadow: 0 0 1rem rgb(230,230,230);
@@ -205,30 +208,31 @@ article>a:nth-of-type(3n+2) {
 	margin: 1.5% 3%;
 }
 
-@media screen and (max-width: 960px) {
-	article>a:nth-of-type(odd) {
-		width: 46%;
-		margin: 1.5% 1% 1.5% 0;
-	}
-	article>a:nth-of-type(even) {
-		width: 46%;
-		margin-left: 1.5% 0 1.5% 1%;
-	}
-}
-@media screen and (max-width: 640px) {
-	article>a {
-		width: 100% !important;
-		height: 20vw;
-		margin: 1.5% 0 !important;
-	}
-}
 img {
-	min-width: 100%;
 	height: 100%;
+	min-width: 100%;
+	width: auto;
 	object-fit: cover;
-	object-position: center 25%;
+	object-position: center center;
 	transition: all 100ms ease-out;
 }
+@media screen and (max-width: 960px) {
+	article {
+		flex-direction: column;
+	}
+	article a:not(figure>a) {
+		width: 100%;
+		margin: 1.5% 0 !important;
+		height: 20vw;
+	}
+	img {
+		width: 100%;
+		min-height: 100%;
+		height: auto;
+		object-position: center 25%;
+	}
+}
+
 article>a:hover img {
 	transform: scale(1.03);
 }
@@ -264,6 +268,8 @@ article>a:hover figcaption {
 .modal img {
 	max-width: 100%;
 	max-height: 100%;
+	width: auto;
+	height: auto;
 }
 .modal:target {
 	display: block;
