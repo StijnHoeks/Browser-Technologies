@@ -8,13 +8,15 @@
             nav.hamburger()
         }
     }
-    var feature =  {
-        detection: function() {
-            
+    var detect =  {
+        device: function() {
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                $('body').addClass('isMobile')
+            }
         }
     }
     var sparkle = {
-        
+
     }
     var nav = {
         hamburger: function() {
