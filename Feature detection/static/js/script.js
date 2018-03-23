@@ -11,15 +11,13 @@
         }
     }
     var nav = {
-        hamburger: function() {
-
+        hamburger: function() { 
             var nav = document.getElementById('nav');
             var hamburger = document.getElementById('hamburger');
-
+            nav.classList.add('enhanced'); 
             hamburger.addEventListener("click", function() {
                 nav.classList.toggle('showmenu');
             })
-
         }
     }
     var detect =  {
