@@ -109,10 +109,13 @@ nav.enhanced #submenu a:hover:after {
 	width: 100%;
 	left: 0;
 }
+nav>ul>li:first-of-type {
+	font-weight: 600;
+}
 
 /* HAMBURGER */
 
-nav>ul>li:first-of-type {
+nav>ul>li:last-of-type {
 	display: none;
 }
 #hamburger {
@@ -149,8 +152,17 @@ nav.enhanced #submenu {
 	nav ul {
 		flex-direction: column;
 	}
-	nav>ul>li:first-of-type {
+	nav>ul>li:last-of-type {
 		display: block;
+	}
+	nav>ul>li:first-of-type {
+		position: absolute;
+		width: 100px;
+		width: min-content;
+		left: 0;
+		right: 0;
+		margin: auto;
+		text-align: center;
 	}
 	nav.enhanced #submenu {
 		display: block;
@@ -187,48 +199,6 @@ nav.enhanced #submenu {
 		transform-origin: left top;
 		margin-top: 0.1rem;
 	}
-}
-body.ismobile nav ul {
-	flex-direction: column;
-}
-body.ismobile nav>ul>li:first-of-type {
-	display: block;
-}
-body.ismobile #submenu {
-	display: block;
-	height: 0;
-	overflow: hidden;
-	transition: all 300ms ease;
-}
-body.ismobile #submenu li {
-	display: block;
-}
-body.ismobile nav a {
-	line-height: 2rem;
-	padding: 2rem;
-	width: min-content;
-	white-space: nowrap;
-}
-body.ismobile nav.showmenu #submenu {
-	display: block;
-	min-height: 100vh;
-	transition: all 300ms ease;
-}
-body.ismobile nav.showmenu #submenu li {
-	display: block;
-}
-body.ismobile nav.showmenu #hamburger span:nth-of-type(1) {
-	transform: rotate(45deg);
-	transform-origin: left bottom;
-	margin-top: 0.1rem;
-}
-body.ismobile nav.showmenu #hamburger span:nth-of-type(2) {
-	width: 0;
-}
-body.ismobile nav.showmenu #hamburger span:nth-of-type(3) {
-	transform: rotate(-45deg);
-	transform-origin: left top;
-	margin-top: 0.1rem;
 }
 
 /***********/
