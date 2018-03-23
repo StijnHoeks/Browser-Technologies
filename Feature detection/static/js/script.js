@@ -6,26 +6,29 @@
     var app = {
         init: function() {
             nav.hamburger()
-            detect.feature()
+            fallback.body()
+            enhance.body()
         }
     }
     var nav = {
         hamburger: function() { 
             var nav = document.getElementById('nav');
-            var body = document.getElementById('body');
-            nav.classList.add('enhanced');
-            body.classList.add('enhanced')
-            var hamburger = document.getElementById('hamburger');
-            hamburger.addEventListener("click", function() {
+            nav.addEventListener("click", function() {
                 nav.classList.toggle('showmenu');
             })
         }
     }
-    var detect =  {
-        feature: function() {
+    var fallback = {
+        body: function() {
             if ( !window.CSS && !CSS.supports('object-fit','contain')) {
                 document.querySelectorAll('a>img').classList.add('fallback');
             }
+        }
+    }
+    var enhance = {
+        body: function() {
+            var body = document.getElementById('body');
+            body.classList.add('enhanced');
         }
     }
 
