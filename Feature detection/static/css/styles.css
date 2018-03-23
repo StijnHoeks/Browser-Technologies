@@ -340,8 +340,8 @@ article>a:hover figcaption {
 }
 figure a {
 	position: absolute;
-	top: 6.25rem;
-	right: 10rem;
+	top: 5rem;
+	right: 5rem;
 	color: rgb(255,255,255);
 	font-size: 5rem;
 	text-shadow: 0 0 2rem rgb(120,120,120);
