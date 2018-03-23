@@ -8,7 +8,7 @@ https://stijnhoeks.github.io/Browser-Technologies/Feature%20detection/
 CSS
 - Fallback rgb colors for rgba format
 - HTML Image ratio fallback (when object-fit isn't supported)
-- Staticfallback  (sub)menu
+- Static fallback (sub)menu
 - Cursor enhancement for -webkit- and -moz-
 - Responsive layout
 - Transitions and transformations for browsers supported
