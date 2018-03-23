@@ -231,4 +231,120 @@ body.ismobile nav.showmenu #hamburger span:nth-of-type(3) {
 	margin-top: 0.1rem;
 }
 
+/***********/
+/* ARTICLE */
+/***********/
+
+article {
+	display: flex;
+}
+article>a {
+	display: inline-block;
+	position: relative;
+	width: 30%;
+	height: 30vw;
+	border-radius: 0.3rem;
+	overflow: hidden;
+	margin: 1.5% 0;
+	top: -1rem;
+}
+article>a:hover {
+	cursor: -moz-zoom-in; 
+    cursor: -webkit-zoom-in; 
+    cursor: zoom-in;
+}
+article>a:nth-of-type(3n+2) {
+	margin: 1.5% 3%;
+}
+
+a>img {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+	transition: all 100ms ease-out;
+}
+a>img.fallback {
+	height: 100%;
+	min-width: 100%;
+	width: auto;
+	transform-origin: 25% center;
+}
+@media screen and (max-width: 960px) {
+	article {
+		flex-direction: column;
+	}
+	article a:not(figure>a) {
+		width: 100%;
+		margin: 1.5% 0 !important;
+		height: 20vw;
+	}
+	img {
+		left: 0 !important;
+		width: 100%;
+	}
+	a>img.fallback {
+		width: 100%;
+		min-height: 100%;
+		height: auto;
+	}
+}
+
+article>a:hover img {
+	transform: scale(1.03);
+}
+article>a figcaption {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: 2rem;
+	color: rgb(60,60,60);
+	transition: all 150ms ease-out;
+	opacity: 0;
+	background-color: rgb(255,255,255);
+	background-color: rgba(255,255,255,0.6);
+}
+article>a:hover figcaption {
+	opacity: 1;
+}
+.modal {
+	display: none;
+	position: absolute;
+	left: 0vw;
+	top: 0vh;
+	width: 100%;
+	height: 100%;
+	z-index: 90;
+	padding: 7.5rem;
+	background-color: rgb(35,35,35);
+	background-color: rgba(0,0,0,0.85);
+	color: rgb(255,255,255);
+	line-height: 3;
+}
+.modal:target {
+	display: block;
+}
+.modal img {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	margin: 0 auto;
+}
+.modal figcaption {
+	width: 100%;
+	text-align: center;
+}
+figure a {
+	position: absolute;
+	top: 5rem;
+	right: 5rem;
+	color: rgb(255,255,255);
+	font-size: 5rem;
+	text-shadow: 0 0 2rem rgb(120,120,120);
+	text-shadow: 0 0 2rem rgba(0,0,0,0.4);
+}
 
