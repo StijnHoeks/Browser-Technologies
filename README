@@ -1,0 +1,19 @@
+# FEATURE DETECTION
+
+## URL
+https://stijnhoeks.github.io/Browser-Technologies/Feature%20detection/
+
+## Features implemented
+
+CSS
+- Fallback rgb colors for rgba format
+- HTML Image ratio fallback (when object-fit isn't supported)
+- Staticfallback  (sub)menu
+- Cursor enhancement for -webkit- and -moz-
+- Responsive layout
+- Transitions and transformations for browsers supported
+
+JS
+- Feature detection CSS, e.g. object-fit
+- Adding enhanced class
+- Device detection (mobile)
