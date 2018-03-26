@@ -1,0 +1,138 @@
+
+/*********/
+/* RESET */
+/*********/
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style: normal;
+	text-decoration: none;
+	list-style: none;
+	border-collapse: collapse;
+	box-sizing: border-box;
+}
+
+
+/********/
+/* MAIN */
+/********/
+
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	color: rgb(60,60,60);
+	font-size: 1.4rem;
+	padding: 5% 10%;
+	/*scroll-behavior: smooth;*/
+}
+
+section {
+	height: 100%;
+}
+
+/************/
+/* ELEMENTS */
+/************/
+
+header {
+	padding: 1rem 0 2rem 0;
+}
+h1 {
+	font-weight: 500;
+	font-size: 2rem;
+	line-height: 1.5;
+}
+h2 {
+	font-weight: 400;
+	font-size: 1.8rem;
+	line-height: 1.5;
+}
+
+
+/**************/
+/* LIST ITEMS */
+/**************/
+
+li.marker {
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+a {
+	display: flex;
+	position: relative;
+	align-items: center;
+	width: 100%;
+	margin: 1rem 0;
+	overflow: hidden;
+	color: rgb(60,60,60);
+	padding: 0.5rem 1rem;
+	transition: all 200ms ease;
+	border-radius: 0.3rem;
+}
+a:hover, a:target {
+	background-color: rgb(247,247,247);
+	outline: 0;
+}
+
+a:target {
+	padding: 1rem;
+}
+a img {
+	display: inline-block;
+	position: relative;
+	height: 6rem;
+	width: 6rem;
+	border-radius: 50%;
+	object-fit: cover;
+}
+a header {
+	margin: 0 2.5%;
+}
+a p {
+	display: block;
+	overflow: hidden;
+	height: 0;
+	white-space: nowrap;
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+	transition: all 200ms ease;
+}
+a:target p {
+	height: 1.5rem;
+}
+a div {
+	display: none;
+	position: absolute;
+	height: min-content;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	right: 3rem;
+	padding: 1rem 1rem 0 1rem;
+	background-color: rgb(100,210,160);
+	color: rgb(255,255,255);
+}
+a:target div {
+	display: block;
+}
+form {
+	display: inline-block;
+	margin-bottom: 1rem;
+}
+input:last-of-type {
+	background-color: transparent;
+}
+input:last-of-type:active {
+	background-color: rgb(100,210,160);
+	border-color: rgb(100,210,160);
+}
+input {
+	padding: 0.5rem;
+	border: 1px solid rgb(60,60,60);
+}
+
