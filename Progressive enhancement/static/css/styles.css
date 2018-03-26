@@ -34,13 +34,15 @@ body {
 section {
 	height: 100%;
 }
-
+article {
+	padding: 1rem 0;
+}
 /************/
 /* ELEMENTS */
 /************/
 
 header {
-	padding: 1rem 0 2rem 0;
+	padding: 1rem 0;
 }
 h1 {
 	font-weight: 500;
