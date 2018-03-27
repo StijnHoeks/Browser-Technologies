@@ -3,13 +3,17 @@
 <header>
 	<h1>Contacts</h1>
 </header>
-<article id="list">	
+<article id="contacts">
 
 	<% if (data) { %>
 		<ul>
 		<% for(var i = 0; i < data.length; i++) { %>
-			<li id=item<%= i %>>
-				<h1><%= data[i].letter %></h1>
+			<li id=<%= data[i].letter %>>
+				<a href="#<%= data[i].letter %>">
+					<h1 id="<%=data[i].letter%>">
+						<%= data[i].letter %>
+					</h1>
+				</a>
 				<ul>
 					<% for(var j = 0; j < data[i].data.length; j++) { %>
 						<li>
@@ -29,6 +33,8 @@
 		</ul>
 	<% } %>
 
+	<h1 id="sticky"></h1>
+
 </article>
 
 <aside>
@@ -36,7 +42,7 @@
 		<ul>
 		<% for(var i = 0; i < data.length; i++) { %>
 			<li>
-				<a href=#item<%= i %>>
+				<a href="#<%=data[i].letter%>">
 					<%= data[i].letter %>
 				</a>
 			</li>
@@ -45,7 +51,30 @@
 	<% } %>
 </aside>
 
+<script type="text/javascript">
+	(function() {
+		var letter = document.querySelectorAll('#contacts ul li h1');
+		var sticky = document.getElementById('sticky');
+		var navLetter = document.querySelectorAll('aside a');
+		var navletterT =
+		window.addEventListener('scroll', function() {
+			var stickyTop = window.scrollY;
+			for (var i = 0; i < letter.length; i++) {
+				var letterScrlT = letter[i].offsetTop;
+				if ( stickyTop > letterScrlT ) {
+					sticky.innerHTML = letter[i].innerHTML;
+					letter[i].classList.add('hide')
+				}
+				else {
+					letter[i].classList.remove('hide')
+				}
+				if ( stickyTop < letter[0].offsetTop ) {
+					sticky.innerHTML = '';
+				}
+			}
+		});
 
+		var 
 
-
-
+	})();
+</script>

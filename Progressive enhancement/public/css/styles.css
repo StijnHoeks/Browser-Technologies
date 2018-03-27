@@ -40,9 +40,23 @@ a {
 /* CONTACT LIST */
 /****************/
 article h1 {
+	position: relative;
 	background-color: rgb(245,245,245);
 	padding-left: 1.5rem;
 	border-radius: 0.3rem;
+	z-index: 10;
+}
+article h1#sticky {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 15%;
+	width: 70%;
+	background-color: rgb(245,245,245);
+	z-index: 0;
+}
+.hide {
+	visibility: hidden;
 }
 article ul {
 	padding: 0;
@@ -57,7 +71,7 @@ article header {
 	display: flex;
 	align-items: center;
 }
-article li>a {
+article ul ul a {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -73,7 +87,6 @@ article .phone {
 	margin-left: 4rem;
 	height: 0;
 	overflow: hidden;
-	transition: all 100ms ease;
 }
 article li>a:target .phone {
 	height: min-content;
@@ -83,6 +96,7 @@ article img {
 	height: 3rem;
 	margin-right: 1rem;
 }
+
 /************/
 /* SIDE NAV */
 /************/
@@ -112,5 +126,3 @@ aside a:hover {
 	color: rgb(255,255,255);
 	background-color: rgb(240,100,60);
 }
-
-
