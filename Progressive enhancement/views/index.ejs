@@ -1,0 +1,42 @@
+<% include head.ejs %>
+
+<header>
+	<h1>Contacts</h1>
+</header>
+<article id="list">	
+
+	<% if (data) { %>
+		<ul>
+		<% for(var i = 0; i < data.length; i++) { %>
+			<li id=item<%= i %>>
+				<%= data[i].letter %>
+				<ul>
+					<% for(var j = 0; j < data[i].data.length; j++) { %>
+						<li><%= data[i].data[j].first %></li>
+					<% } %>
+				</ul>
+			</li>
+		<% } %>
+		</ul>
+	<% } %>
+
+</article>
+
+<aside>
+	<% if (data) { %>
+		<ul>
+		<% for(var i = 0; i < data.length; i++) { %>
+			<li>
+				<a href=#item<%= i %>>
+					<%= data[i].letter %>
+				</a>
+			</li>
+		<% } %>
+		</ul>
+	<% } %>
+</aside>
+
+
+
+
+

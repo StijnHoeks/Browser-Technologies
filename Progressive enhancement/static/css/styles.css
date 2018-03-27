@@ -31,18 +31,12 @@ body {
 	/*scroll-behavior: smooth;*/
 }
 
-section {
-	height: 100%;
-}
-article {
-	padding: 1rem 0;
-}
-/************/
-/* ELEMENTS */
-/************/
+
+/**********/
+/* HEADER */
+/**********/
 
 header {
-	padding: 1rem 0;
 }
 h1 {
 	font-weight: 500;
@@ -60,10 +54,6 @@ h2 {
 /* LIST ITEMS */
 /**************/
 
-li.marker {
-	font-size: 1.6rem;
-	font-weight: 500;
-}
 a {
 	display: flex;
 	position: relative;
@@ -84,57 +74,20 @@ a:hover, a:target {
 a:target {
 	padding: 1rem;
 }
-a img {
-	display: inline-block;
+
+
+/************/
+/* LIST NAV */
+/************/
+
+aside ul {
+	display: flex;
 	position: relative;
-	height: 6rem;
-	width: 6rem;
-	border-radius: 50%;
-	object-fit: cover;
+	height: 100%;
+	flex-direction: column;
+	justify-content: space-between;
 }
-a header {
-	margin: 0 2.5%;
-}
-a p {
-	display: block;
-	overflow: hidden;
-	height: 0;
-	white-space: nowrap;
-	font-size: 1.2rem;
-	line-height: 1.5rem;
-	transition: all 200ms ease;
-}
-a:target p {
-	height: 1.5rem;
-}
-a div {
-	display: none;
-	position: absolute;
-	height: min-content;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	right: 3rem;
-	padding: 1rem 1rem 0 1rem;
-	background-color: rgb(100,210,160);
-	color: rgb(255,255,255);
-}
-a:target div {
-	display: block;
-}
-form {
-	display: inline-block;
-	margin-bottom: 1rem;
-}
-input:last-of-type {
-	background-color: transparent;
-}
-input:last-of-type:active {
-	background-color: rgb(100,210,160);
-	border-color: rgb(100,210,160);
-}
-input {
-	padding: 0.5rem;
-	border: 1px solid rgb(60,60,60);
-}
+
+
+
 
