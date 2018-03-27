@@ -9,14 +9,17 @@
 		<ul>
 		<% for(var i = 0; i < data.length; i++) { %>
 			<li id=item<%= i %>>
-				<%= data[i].letter %>
+				<h1><%= data[i].letter %></h1>
 				<ul>
 					<% for(var j = 0; j < data[i].data.length; j++) { %>
 						<li>
-							<a>
-								
-								<%= data[i].data[j].first %>
-								<%= data[i].data[j].last %>
+							<a id="<%=data[i].data[j].name.first%>_<%=data[i].data[j].name.last%>" href="#<%=data[i].data[j].name.first%>_<%=data[i].data[j].name.last%>">
+								<header>
+									<img src='<%= data[i].data[j].picture.thumbnail %>' />
+									<%= data[i].data[j].name.first %>
+									<%= data[i].data[j].name.last %>
+								</header>
+								<p class="phone"><%= data[i].data[j].phone %></p>
 							</a>
 						</li>
 					<% } %>
