@@ -11,6 +11,7 @@ app.get('/', function (req, res) {
   request(host, function (error, response, body) {
     var data = JSON.parse(body);
     var results = data.results;
+    console.log(results)
 
     results.sort(function(a, b) {
 		var nameA = a.name.first.toUpperCase(); // ignore upper and lowercase

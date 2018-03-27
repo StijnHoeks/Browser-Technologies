@@ -12,7 +12,13 @@
 				<%= data[i].letter %>
 				<ul>
 					<% for(var j = 0; j < data[i].data.length; j++) { %>
-						<li><%= data[i].data[j].first %></li>
+						<li>
+							<a>
+								<img src=<%= data[i].data[j].picture.medium %> />
+								<%= data[i].data[j].first %>
+								<%= data[i].data[j].last %>
+							</a>
+						</li>
 					<% } %>
 				</ul>
 			</li>
