@@ -12,21 +12,19 @@
         },
         navcur: function(sticky) {
             var letter = document.getElementsByClassName('letter');
-            var aside = document.getElementsByTagName('aside');
-            console.log(aside)
-            var asideLetter = document.querySelectorAll('aside a');
-            var scrollBar = document.createElement('div');
-            scrollBar.setAttribute('id','scrollbar')
-            aside.appendChild = scrollBar;
-
-            var body = document.body, 
-                html = document.documentElement;
-            var docHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
-
+            var navLetter = document.querySelectorAll('aside a');
+            var scrollBar = document.createElement('div')
             window.addEventListener('scroll', function() {
                 for (var i = 0; i < letter.length; i++) {
                     var windowTop = window.scrollY;
-
+                    var letterScrlT = letter[i].offsetTop;
+                    if ( windowTop >= letterScrlT
+                     ) {
+                        navLetter[i].classList.add('cur')
+                    }
+                    else {
+                        navLetter[i].classList.remove('cur')
+                    }
                 }
             });
 
@@ -47,7 +45,7 @@
                     var letterScrlT = letter[i].offsetTop;
                     if ( windowTop >= letterScrlT ) {
                         sticky.innerHTML = letter[i].innerHTML;
-                        letter[i].classList.add('hide')
+                        letter[i].classList.add('hide') 
                     }
                     else {
                         letter[i].classList.remove('hide')

@@ -17,18 +17,20 @@
 				<ul>
 					<% for(var j = 0; j < data[i].data.length; j++) { %>
 						<li>
-							<a id="<%=data[i].data[j].name.first%>_<%=data[i].data[j].name.last%>" href="#<%=data[i].data[j].name.first%>_<%=data[i].data[j].name.last%>">
+							<a href="#<%=data[i].data[j].name.first%>_<%=data[i].data[j].name.last%>">
 								<header>
 									<div></div>
 
-									<img src='<%= data[i].data[j].picture.thumbnail %>' />
+									<img id="tumbnail" src='<%= data[i].data[j].picture.thumbnail %>' />
 									<%= data[i].data[j].name.first %>
 									<%= data[i].data[j].name.last %>
 								</header>
-								<p class="modal">
-									<img src='<%= data[i].data[j].picture.thumbnail %>' />
+								<p id="<%=data[i].data[j].name.first%>_<%=data[i].data[j].name.last%>" class="modal">
+									<img id="imgThumbnail" src='<%= data[i].data[j].picture.thumbnail %>' />
+									<img id="imgLarge" src='<%= data[i].data[j].picture.large %>' />
 									<span><%= data[i].data[j].name.first %> <%= data[i].data[j].name.last %></span>
 									<span><%= data[i].data[j].phone %></span>
+									<a href="#">X</a>
 								</p>
 							</a>
 						</li>
