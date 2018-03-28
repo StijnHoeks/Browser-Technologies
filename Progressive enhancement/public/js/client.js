@@ -2,37 +2,66 @@
 
     var app = {
         detect: function() {
-            app.navcur()
-            cssSticky = CSS.supports('position', 'sticky');
-            if( !cssSticky ) { app.sticky() }
-        },
-        navcur: function() {
-
-        },
-        sticky: function() {
-
-            var navLetter = document.querySelectorAll('aside a');
-            var letter = document.querySelectorAll('#contacts ul li h1');
             var sticky = document.getElementById('sticky');
-            var raf = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame;
+            app.navcur(sticky)
+            cssSticky = CSS.supports('position', 'sticky');
+            if ( !cssSticky ) {
+                app.sticky(sticky)
+            }
+
+        },
+        navcur: function(sticky) {
+            var letter = document.getElementsByClassName('letter');
+            var aside = document.getElementsByTagName('aside');
+            console.log(aside)
+            var asideLetter = document.querySelectorAll('aside a');
+            var scrollBar = document.createElement('div');
+            scrollBar.setAttribute('id','scrollbar')
+            aside.appendChild = scrollBar;
+
+            var body = document.body, 
+                html = document.documentElement;
+            var docHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
 
             window.addEventListener('scroll', function() {
-                var stickyTop = window.scrollY;
+                for (var i = 0; i < letter.length; i++) {
+                    var windowTop = window.scrollY;
+
+                }
+            });
+
+        },
+        sticky: function(sticky) {
+
+            var letter = document.querySelectorAll('#contacts ul li h1');
+
+            var waiting = false, endScrollHandle;
+            window.addEventListener('scroll', function() {
+                var windowTop = window.scrollY;
+                if (waiting) {
+                    return;
+                }
+                waiting = true;
+                clearTimeout(endScrollHandle);
                 for (var i = 0; i < letter.length; i++) {
                     var letterScrlT = letter[i].offsetTop;
-                    if ( stickyTop >= letterScrlT && raf ) {
+                    if ( windowTop >= letterScrlT ) {
                         sticky.innerHTML = letter[i].innerHTML;
                         letter[i].classList.add('hide')
-                        navLetter[i].classList.add('cur')
                     }
                     else {
                         letter[i].classList.remove('hide')
-                        navLetter[i].classList.remove('cur')
                     }
-                    if ( stickyTop < letter[0].offsetTop ) {
+                    if ( windowTop < letter[0].offsetTop ) {
                         sticky.innerHTML = '';
                     }
                 }
+                setTimeout(function () {
+                    waiting = false;
+                }, 50);
+                endScrollHandle = setTimeout(function () {
+                    scroll();
+                }, 100);
             }); 
         }
     }

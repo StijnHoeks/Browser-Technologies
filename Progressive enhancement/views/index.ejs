@@ -10,7 +10,7 @@
 		<% for(var i = 0; i < data.length; i++) { %>
 			<li id=<%= data[i].letter %>>
 				<a href="#<%= data[i].letter %>">
-					<h1 id="<%=data[i].letter%>">
+					<h1 id="<%=data[i].letter%>" class="letter">
 						<%= data[i].letter %>
 					</h1>
 				</a>
@@ -25,7 +25,11 @@
 									<%= data[i].data[j].name.first %>
 									<%= data[i].data[j].name.last %>
 								</header>
-								<p class="phone"><%= data[i].data[j].phone %></p>
+								<p class="modal">
+									<img src='<%= data[i].data[j].picture.thumbnail %>' />
+									<span><%= data[i].data[j].name.first %> <%= data[i].data[j].name.last %></span>
+									<span><%= data[i].data[j].phone %></span>
+								</p>
 							</a>
 						</li>
 					<% } %>
