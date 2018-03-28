@@ -19,6 +19,8 @@
 						<li>
 							<a id="<%=data[i].data[j].name.first%>_<%=data[i].data[j].name.last%>" href="#<%=data[i].data[j].name.first%>_<%=data[i].data[j].name.last%>">
 								<header>
+									<div></div>
+
 									<img src='<%= data[i].data[j].picture.thumbnail %>' />
 									<%= data[i].data[j].name.first %>
 									<%= data[i].data[j].name.last %>
@@ -50,31 +52,5 @@
 		</ul>
 	<% } %>
 </aside>
+<script src="js/client.js"></script>
 
-<script type="text/javascript">
-	(function() {
-		var letter = document.querySelectorAll('#contacts ul li h1');
-		var sticky = document.getElementById('sticky');
-		var navLetter = document.querySelectorAll('aside a');
-		var navletterT =
-		window.addEventListener('scroll', function() {
-			var stickyTop = window.scrollY;
-			for (var i = 0; i < letter.length; i++) {
-				var letterScrlT = letter[i].offsetTop;
-				if ( stickyTop > letterScrlT ) {
-					sticky.innerHTML = letter[i].innerHTML;
-					letter[i].classList.add('hide')
-				}
-				else {
-					letter[i].classList.remove('hide')
-				}
-				if ( stickyTop < letter[0].offsetTop ) {
-					sticky.innerHTML = '';
-				}
-			}
-		});
-
-		var 
-
-	})();
-</script>

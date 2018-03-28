@@ -4,6 +4,7 @@ var app = express()
 var host = 'https://randomuser.me/api/?results=50&nat=nl';
 
 app.use(express.static('public'))
+app.use('/js', express.static(__dirname + '/js'));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
@@ -50,3 +51,5 @@ var server = app.listen(1337, function () {
 })
 
 
+/*Intersection Observer*/
+/*sticky css*/
