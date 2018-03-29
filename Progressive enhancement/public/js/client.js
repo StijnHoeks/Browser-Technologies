@@ -11,7 +11,7 @@
                 app.sticky(sticky);
             }
         },
-        navcur: function(sticky) {
+        navcur: function() {
             var letter = document.getElementsByClassName('letter');
             var navLetter = document.querySelectorAll('aside a');
             var scrollBar = document.createElement('div')
