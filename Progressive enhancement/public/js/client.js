@@ -3,10 +3,13 @@
     var app = {
         detect: function() {
             var sticky = document.getElementById('sticky');
-            app.navcur(sticky)
+            var searchbar = document.getElementById('input');
+            searchbar.classList.remove('hidden')
+            app.navcur(sticky);
+            app.filter();
             cssSticky = CSS.supports('position', 'sticky');
             if ( !cssSticky ) {
-                app.sticky(sticky)
+                app.sticky(sticky);
             }
 
         },
@@ -61,6 +64,21 @@
                     scroll();
                 }, 100);
             }); 
+        },
+        filter: function() {
+            var input = document.getElementById('input');
+            var filter = input.value;
+            var li = document.querySelectorAll('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("h1")[0];
+                if (a.innerHTML.indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
         }
     }
 

@@ -179,7 +179,16 @@ aside div {
 	background-color: blue;
 }
 
-
-
+input {
+	width: 100%;
+	margin: 1rem 0;
+	padding: 0.5rem;
+	font-size: 1.2rem;
+	border: 1px solid rgb(200,200,200);
+	border-radius: 0.3rem;
+}
+input.hidden {
+	display: none;
+}
 
 
