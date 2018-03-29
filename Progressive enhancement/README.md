@@ -3,17 +3,21 @@
 ## Core Functionality
 
 Contact list based on random user API.
+API: https://randomuser.me/api/?results=50&nat=nl
 
 ## Features/Browser Technologies
 
 > HTML
+
 Main/detail view
 - Based on css :target
 
 > CSS
+
 Sticky header
 
 > JS
+
 Partially client/server-side
 - Server-side: Rebuilding API array.
 - Client-side: Functions, events and DOM manipulations
