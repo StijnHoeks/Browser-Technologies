@@ -172,13 +172,15 @@ aside li:last-of-type a {
 	border-bottom-left-radius: 50%;
 	border-bottom-right-radius: 50%;
 }
-aside a:hover, .cur {
+aside a:hover, .cur, aside a:focus {
 	color: rgb(255,255,255);
 	background-color: rgb(255,130,100);
+	outline: 0;
 }
-a.cur:hover {
+a.cur:hover, a:focus {
 	color: rgb(255,130,100) !important;
 	background-color: rgb(255,255,255) !important;
+	outline: 0;
 }
 
 aside div {

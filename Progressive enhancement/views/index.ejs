@@ -20,13 +20,12 @@
 						<li>
 							<a class="name" href="#<%=data[i].data[j].name.first%>_<%=data[i].data[j].name.last%>">
 								<header>
-									<img id="tumbnail" src='<%= data[i].data[j].picture.thumbnail %>' />
+									<img id="tumbnail" src='<%= data[i].data[j].picture.thumbnail %>' alt="photo-<%=data[i].data[j].name.first%>_<%=data[i].data[j].name.last%>" />
 									<%= data[i].data[j].name.first %>
 									<%= data[i].data[j].name.last %>
 								</header>
 								<p id="<%=data[i].data[j].name.first%>_<%=data[i].data[j].name.last%>" class="modal">
-									<img id="imgThumbnail" src='<%= data[i].data[j].picture.thumbnail %>' />
-									<img id="imgLarge" src='<%= data[i].data[j].picture.large %>' />
+									<img id="imgLarge" src='<%= data[i].data[j].picture.large %>' alt="photo-<%=data[i].data[j].name.first%>_<%=data[i].data[j].name.last%>" />
 									<span><%= data[i].data[j].name.first %> <%= data[i].data[j].name.last %></span>
 									<span><%= data[i].data[j].phone %></span>
 									<span id="phone">&#9742;</span>
