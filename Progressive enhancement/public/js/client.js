@@ -6,7 +6,7 @@
             var searchbar = document.getElementById('input');
             searchbar.classList.remove('hidden')
             app.navcur(sticky);
-            app.filter();
+            /*app.filter();*/
             cssSticky = CSS.supports('position', 'sticky');
             if ( !cssSticky ) {
                 app.sticky(sticky);
@@ -64,7 +64,7 @@
                     scroll();
                 }, 100);
             }); 
-        },
+        }/*,
         filter: function() {
             var input = document.getElementById('input');
             var filter = input.value;
@@ -79,7 +79,7 @@
                     li[i].style.display = "none";
                 }
             }
-        }
+        }*/
     }
 
     app.detect()
