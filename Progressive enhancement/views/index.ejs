@@ -7,7 +7,7 @@
 
 	<% if (data) { %>
 		<ul>
-		<input type="text" class="hidden"id="filter" onkeyup="filter()" placeholder="Search for names..">
+		<input type="text" class="hidden"id="filter" onkeyup="filter()" placeholder="search">
 		<% for(var i = 0; i < data.length; i++) { %>
 			<li id=<%= data[i].letter %>>
 				<a href="#<%= data[i].letter %>">
