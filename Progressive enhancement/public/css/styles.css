@@ -83,6 +83,15 @@ article ul ul a {
 article li li:nth-of-type(n+2) a {
 	border-top: 1px solid rgb(245,245,245);
 }
+p>a {
+	border: none !important;
+}
+#phone {
+	font-size: 2rem;
+}
+a:hover #phone {
+	color: rgb(100,200,160);
+}
 article a:hover {
 	background-color: rgb(250,250,250);
 }

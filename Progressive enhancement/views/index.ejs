@@ -7,7 +7,7 @@
 
 	<% if (data) { %>
 		<ul>
-		<input type="text" id="input" onkeyup="app.filter()">
+		<input type="text" class="hidden"id="filter" onkeyup="filter()" placeholder="Search for names..">
 		<% for(var i = 0; i < data.length; i++) { %>
 			<li id=<%= data[i].letter %>>
 				<a href="#<%= data[i].letter %>">
@@ -18,10 +18,8 @@
 				<ul>
 					<% for(var j = 0; j < data[i].data.length; j++) { %>
 						<li>
-							<a href="#<%=data[i].data[j].name.first%>_<%=data[i].data[j].name.last%>">
+							<a class="name" href="#<%=data[i].data[j].name.first%>_<%=data[i].data[j].name.last%>">
 								<header>
-									<div></div>
-
 									<img id="tumbnail" src='<%= data[i].data[j].picture.thumbnail %>' />
 									<%= data[i].data[j].name.first %>
 									<%= data[i].data[j].name.last %>
@@ -31,6 +29,7 @@
 									<img id="imgLarge" src='<%= data[i].data[j].picture.large %>' />
 									<span><%= data[i].data[j].name.first %> <%= data[i].data[j].name.last %></span>
 									<span><%= data[i].data[j].phone %></span>
+									<span id="phone">&#9742;</span>
 									<a href="#">X</a>
 								</p>
 							</a>
@@ -59,5 +58,26 @@
 		</ul>
 	<% } %>
 </aside>
+<script>
+function filter() {
+  var input = document.getElementById("filter");
+  var filter = input.value.toUpperCase();
+  var table = document.getElementById("contacts");
+  var tr = table.getElementsByTagName("li");
+
+  // Loop through all table rows, and hide those who don't match the search query
+	for (i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("h1")[0];
+		if (td) {
+		    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+		        tr[i].style.display = "";
+		    } 
+		    else {
+		        tr[i].style.display = "none";
+		    }
+		} 
+	}
+}
+</script>
 <script src="js/client.js"></script>
 
