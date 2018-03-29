@@ -11,7 +11,6 @@
             if ( !cssSticky ) {
                 app.sticky(sticky);
             }
-
         },
         navcur: function(sticky) {
             var letter = document.getElementsByClassName('letter');
@@ -30,7 +29,6 @@
                     }
                 }
             });
-
         },
         sticky: function(sticky) {
 
